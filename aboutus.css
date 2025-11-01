@@ -1,0 +1,128 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color:white;
+    text-align: center;
+}
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #0c1c5d; /* Dark Blue */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: url('background.jpg') no-repeat center center/cover;
+}
+
+/* ✅ Fully Responsive Header */
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+    height: auto; /* Auto height to adjust based on content */
+    padding: 50px 20px;
+    text-align: center;
+    /* background: url('background.jpg') no-repeat center center/cover; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header Text */
+.header-container h1 {
+    color: #0c1c5d;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Main Content */
+.container {
+    max-width: 1000px;
+    width: 90%;
+    min-height: 60vh;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* 📌 Media Queries for Responsiveness */
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 80%;
+    }
+
+    .header-container {
+        padding: 40px 15px;
+    }
+
+    .header-container h1 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .header-container {
+        flex-direction: column; /* Stack items vertically */
+        padding: 30px 10px;
+    }
+
+    .header-container h1 {
+        font-size: 26px;
+    }
+
+    .container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-container {
+        padding: 20px 5px;
+    }
+
+    .header-container h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+}
+

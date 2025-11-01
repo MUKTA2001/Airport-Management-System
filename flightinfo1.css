@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+
+.header {
+    display: flex;
+   
+   
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    gap: 10px;
+}
+ .logo{
+     display: flex; 
+     align-items: center;
+     justify-content: start;
+     margin: auto;
+}
+
+.logo img {
+    height: 80px;
+    width: 100px;
+    border-radius: 8px;
+
+}
+
+nav {
+    background:white;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: "Segoe UI";
+}
+
+
+.nav-item .login-btn {
+    background: rgb(9, 9, 88);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+   
+    background-color: rgb(15, 71, 162);
+    transform: translateY(-2px);
+   
+}
+.right ul {
+    display: flex;
+    gap: 10px;
+}
+
+.right ul li {
+
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    cursor: pointer;
+    color: rgb(4, 4, 120);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.right ul li a {
+    text-decoration: none;
+    color: rgb(4, 4, 120); /* Normal text color */
+    font-weight: 500;
+}
+
+.right ul li a:hover {
+    color: rgb(9, 9, 88);
+}
+.left ul{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 10px;
+}
+.left ul li{
+    list-style: none;
+    display: flex;
+    align-items:self-start;
+    color: rgb(4, 4, 120);
+    font-weight: bold;
+}
+.left ul li span {
+    padding-left: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    color: white;
+    background: rgb(9, 9, 88);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 10px;
+}
+.btn.secondary {
+    background: white;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    color: rgb(9, 9, 88);
+    border: 2px solid rgb(115, 164, 241);
+    border-radius: 10px;
+}
+.btn :hover {
+    background-color: rgb(15, 71, 162);
+    transform: translateY(-2px);
+  }
+
+.airplane {
+    position: absolute;
+    bottom: 50px;
+    right: -200px;
+    width: 600px;
+    animation: movePlane 5s infinite alternate ease-in-out;
+}
+
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown svg {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+    top: 40px;
+    left: 0;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+/* Hover Effect */
+.dropdown-content a:hover {
+    background-color: #d1d5fa;
+}
+
+/* JavaScript Toggle Class */
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+/* Rotate Arrow When Active */
+.dropdown.active svg {
+    transform: rotate(180deg);
+}
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown1 svg {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Dropdown Content */
+.dropdown1-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+    top: 40px;
+    left: 0;
+}
+
+/* Dropdown Links */
+.dropdown1-content a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown1-content a:last-child {
+    border-bottom: none;
+}
+
+/* Hover Effect */
+.dropdown1-content a:hover {
+    background-color: #d1d5fa;
+}
+
+/* JavaScript Toggle Class */
+.dropdown1.active .dropdown1-content {
+    display: block;
+}
+
+/* Rotate Arrow When Active */
+.dropdown1.active svg {
+    transform: rotate(180deg);
+}
+
+
+
+.dropdownA {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdownA svg {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Dropdown Content */
+.dropdownA-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+    top: 40px;
+    left: 0;
+}
+
+/* Dropdown Links */
+.dropdownA-content a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdownA-content a:last-child {
+    border-bottom: none;
+}
+
+
+/* JavaScript Toggle Class */
+.dropdownA.active .dropdownA-content {
+    display: block;
+}
+
+/* Rotate Arrow When Active */
+.dropdownA.active svg {
+    transform: rotate(180deg);
+}
+
+
+
+/* Flight Info Section */
+.flight-info-container {
+    text-align: center;
+    margin: 20px;
+   
+}
+
+.flight-info-container h1 {
+    font-size: 24px;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.flight-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.flight-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.flight-card img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.flight-card h2 {
+    font-size: 18px;
+    color: #003366;
+}
+
+.flight-card:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .flight-info {
+        grid-template-columns: 1fr;
+    }
+    .top-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+
+/* Footer Styles */
+.footer {
+    background-color: #0a0d27;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-column p, .footer-column ul {
+    font-size: 14px;
+    color: #ccc;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+
+
+.flight-card a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Keeps text color unchanged */
+    display: block; /* Makes the entire div clickable */
+    transition: transform 0.3s ease-in-out;
+}
+
+.flight-card:hover {
+    transform: scale(1.05); /* Adds a hover effect */
+}

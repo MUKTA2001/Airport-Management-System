@@ -1,0 +1,281 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flight Results</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #333;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+    }
+    .flight-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
+      padding: 12px 0;
+    }
+    .flight-row:last-child {
+      border-bottom: none;
+    }
+    .flight-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .flight-info img {
+      width: 40px;
+      height: 40px;
+    }
+    .flight-details {
+      display: flex;
+      flex-direction: column;
+    }
+    .badge {
+      padding: 6px 12px;
+      border-radius: 12px;
+      font-weight: bold;
+      color: white;
+    }
+    .green { background-color: #28a745; }
+    .red { background-color: #dc3545; }
+    .blue { background-color: #007bff; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Flight Status - 5 May 2025</h2>
+  <div id="results"></div>
+</div>
+
+<script>
+  const searchLocation = localStorage.getItem('searchLocation');
+  const searchTime = localStorage.getItem('searchTime');
+  const allFlights = JSON.parse(localStorage.getItem('flightData')) || [];
+
+  const resultsDiv = document.getElementById('results');
+
+  const filteredFlights = allFlights.filter(flight =>
+    flight.origin.toLowerCase().includes(searchLocation.toLowerCase()) &&
+    flight.time === searchTime
+  );
+
+  if (filteredFlights.length === 0) {
+    resultsDiv.innerHTML = "<p>No flights found for your search.</p>";
+  } else {
+    filteredFlights.forEach(flight => {
+      const badgeClass =
+        flight.status === "All Bags Delivered" ? "green" :
+        flight.status === "Last Bag" ? "red" : "blue";
+
+      resultsDiv.innerHTML += `
+        <div class="flight-row">
+          <div class="flight-info">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/American_Airlines_logo_2013.svg/1200px-American_Airlines_logo_2013.svg.png" alt="Airline Logo">
+            <div class="flight-details">
+              <strong>${flight.flightNo}</strong>
+              <small>${flight.airline}</small>
+            </div>
+          </div>
+          <div>${flight.origin}</div>
+          <div>${flight.time}</div>
+          <div>${flight.terminal}</div>
+          <div>${flight.belt}</div>
+          <div><span class="badge ${badgeClass}">${flight.status}</span></div>
+        </div>
+      `;
+    });
+  }
+</script>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flight Results</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary: #007bff;
+      --success: #28a745;
+      --danger: #dc3545;
+      --light: #f4f6f9;
+      --text: #333;
+      --muted: #6c757d;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--light);
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: var(--text);
+      margin-bottom: 20px;
+      font-size: 24px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    .flight-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
+      padding: 20px 0;
+      transition: background 0.2s ease;
+    }
+
+    .flight-row:hover {
+      background-color: #f9fbfc;
+    }
+
+    .flight-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex: 2;
+    }
+
+    .flight-info img {
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
+      border-radius: 4px;
+      background: #fff;
+    }
+
+    .flight-details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .flight-details strong {
+      font-size: 16px;
+    }
+
+    .flight-details small {
+      color: var(--muted);
+    }
+
+    .flight-data {
+      flex: 1;
+      text-align: center;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .badge {
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 12px;
+      color: white;
+      display: inline-block;
+      text-transform: uppercase;
+    }
+
+    .green { background-color: var(--success); }
+    .red { background-color: var(--danger); }
+    .blue { background-color: var(--primary); }
+
+    @media (max-width: 768px) {
+      .flight-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .flight-data {
+        text-align: left;
+        padding-top: 5px;
+      }
+
+      .flight-info {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Flight Status - 5 May 2025</h2>
+  <div id="results"></div>
+</div>
+
+<script>
+  const searchLocation = localStorage.getItem('searchLocation');
+  const searchTime = localStorage.getItem('searchTime');
+  const allFlights = JSON.parse(localStorage.getItem('flightData')) || [];
+
+  const resultsDiv = document.getElementById('results');
+
+  const filteredFlights = allFlights.filter(flight =>
+    flight.origin.toLowerCase().includes(searchLocation?.toLowerCase() || '') &&
+    flight.time === searchTime
+  );
+
+  if (filteredFlights.length === 0) {
+    resultsDiv.innerHTML = "<p>No flights found for your search.</p>";
+  } else {
+    filteredFlights.forEach(flight => {
+      const badgeClass =
+        flight.status === "All Bags Delivered" ? "green" :
+        flight.status === "Last Bag" ? "red" : "blue";
+
+      resultsDiv.innerHTML += `
+        <div class="flight-row">
+          <div class="flight-info">
+            <img src="https://dohahamadairport.com/sites/default/files/airline/AA.png"
+                 alt="Airline Logo" onerror="this.src='https://via.placeholder.com/40x40?text=A';">
+            <div class="flight-details">
+              <strong>${flight.flightNo}</strong>
+              <small>${flight.airline}</small>
+            </div>
+          </div>
+          <div class="flight-data">${flight.origin}</div>
+          <div class="flight-data">${flight.time}</div>
+          <div class="flight-data">${flight.terminal}</div>
+          <div class="flight-data">${flight.belt}</div>
+          <div class="flight-data"><span class="badge ${badgeClass}">${flight.status}</span></div>
+        </div>
+      `;
+    });
+  }
+</script>
+
+</body>
+</html>

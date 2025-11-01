@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>At The Airport</title>
+    <link rel="stylesheet" href="travelguide.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">
+          <ul>
+            <li><span>Anha&Mukta's Airlines</span></li>
+          </ul>
+        
+          </div>
+           <div class="logo">
+           <img src="Airplane logo.jpg" alt="Airplane">
+           </div>
+         <div class="right">
+            <ul>
+                <li><a href="index.html"><span>Home</a></span>
+                </li>
+           
+                <ul class="navbar">
+                    <li class="dropdown" onclick="toggleDropdown()">
+                        <span>About Us</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        <div class="dropdown-content">
+                            <a href="aboutus.html">About AMA</a>
+                            <a href="terminal.html">Terminals</a>
+                        </div>
+                    </li>
+                </ul>
+            
+                <script>
+                    function toggleDropdown() {
+                        document.querySelector('.dropdown').classList.toggle('active');
+                    }
+                </script>
+                
+                    <li> <li><a href="flightinfo1.html"><span>Flight Info</a></span></li>
+                    <ul class="navbar">
+                        <li class="dropdown1" onclick="toggleDropdown1()">
+                            <span>Airport Guide</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                    stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <div class="dropdown1-content">
+                                <a href="guide.html">At the airport</a>
+                                <a href="terminal.html">Terminal Guide</a>
+                                <a href="airport.html">To/from the airport</a>
+                                <a href="facility.html">Facilities & Services</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <script>
+                        function toggleDropdown1() {
+                            document.querySelector('.dropdown1').classList.toggle('active');
+                        }
+                    </script>
+                    <ul class="navbar">
+                        <li class="dropdownA" onclick="toggleDropdownA()">
+                            <span>Experiences</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                    stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <div class="dropdownA-content">
+                                <a href="shop.html">Shop</a>
+                                <a href="Dine.html">Dine</a>
+                                <a href="Relax.html">Relax</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <script>
+                        function toggleDropdownA() {
+                            document.querySelector('.dropdownA').classList.toggle('active');
+                        }
+                    </script>
+               <li><a href="Contact.html"><span>Contact Us</a></span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="login-btn" href="login.html">Login</a>
+                    </li>
+            </ul>
+         </div>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+        <h1>Traveler Guide</h1>
+        <p>Useful Information for Premium Passengers & Those with Extra Needs</p>
+    </section>
+
+    <section class="info-cards">
+        <div class="card">
+            <img src="Premium Travelers_ Hover box-6ui0rb.jpg" alt="Visa & Immigration">
+            <h2>Premium Travellers</h2>
+            <p>Enjoy exclusive services and our finest hospitality</p>
+        </div>
+        <div class="card">
+            <img src="17. Special Assistance_hover box-byjubk.jpg" alt="Security & Customs">
+            <h2>Special Assistance</h2>
+            <p>Enjoy easier ,smoother journey with dedicated services</p>
+        </div>
+        <div class="card">
+            <img src="19.Unaccompanied Minors_Hover Box-pypt0k.jpg" alt="Transfers">
+            <h2>Unaccompanied Minors</h2>
+            <p>Easing your travel experience and understanding local regulations</p>
+        </div>
+    </section>
+
+    <section class="info-cards">
+        <div class="card">
+            <img src="travel-alert-kwb9tt.jpg" alt="Check In Info">
+            <h2>Travel Alerts</h2>
+            <p>Passenger advisories when traveling to Anah & Mukta airport</p>
+        </div>
+        <div class="card">
+            <img src="tg_al_maha_services-w4wanp.jpg" alt="Baggage Claim">
+            <h2>AL MAha Services</h2>
+            <p>Enhance your travel experience with exclusive hospitality</p>
+        </div>
+        <div class="card">
+            <img src="Travelling with animals_Hover Box-93bx3a.jpg" alt="Maps">
+            <h2>Travelling with Animals</h2>
+            <p>Enjoy simpler procedures and dedicated Facilities-</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Talk to us from wherever you are</p>
+                <p>📍 P.O Box 24659</p>
+                <p>📌 Doha, Qatar</p>
+                <p>📞 (+974) 4010 6666</p>
+                <p>📧 contact-us@hamadairport.com.qa</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>More Info</h3>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="Privacy_notice.html">Privacy Notice</a></li>
+                    <li><a href="Contact.html">Contacts</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Connect with Us</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com">📘 Facebook</a></li>
+                    <li><a href="https://www.linkedin.com/">🔗 LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/">📸 Instagram</a></li>
+                    <li><a href="https://x.com/?lang=en&mx=2">✖ Twitter</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>@A&M Tweets</h3>
+                <p>Tweets by @A&M</p>
+                <p>&copy; Copyright 2023 by Anha & Mukta Airlines.com</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

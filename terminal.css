@@ -1,0 +1,135 @@
+/* ✅ Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ✅ Body Styling */
+body {
+    background: url('background.jpg') no-repeat center center/cover;
+    color: #0c1c5d; /* Dark Blue */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ✅ Fully Responsive Header */
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+    height: auto; /* Auto height to adjust based on content */
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-container h1 {
+    color: #0c1c5d;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* ✅ Main Content Styling */
+.container {
+    max-width: 1000px;
+    width: 90%;
+    min-height: 60vh;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for better visibility */
+}
+
+/* ✅ Heading Styles */
+h2 {
+    color: #0c1c5d;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    
+    padding-bottom: 5px;
+}
+
+/* ✅ Paragraph Styling */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* 📌 Responsive Design Adjustments */
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 80%;
+    }
+
+    .header-container {
+        padding: 40px 15px;
+    }
+
+    .header-container h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Stack items vertically */
+        padding: 30px 10px;
+    }
+
+    .header-container h1 {
+        font-size: 26px;
+    }
+
+    .container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-container {
+        padding: 20px 5px;
+    }
+
+    .header-container h1 {
+        font-size: 22px;
+    }
+
+    .container {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+}
+

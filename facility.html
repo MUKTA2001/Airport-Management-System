@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Management System</title>
+    <link rel="stylesheet" href="facility.css">
+
+    <style>
+        .sub-hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            background-color: #fff;
+
+        }
+
+        .container {
+            text-align: center;
+            max-height: 50%;
+
+        }
+
+        
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 10px;
+
+        }
+
+        .tab {
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            color: black;
+            gap: 5px;
+        }
+
+        
+
+        .search-btn {
+            background-color: navy;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+
+        h1 {
+            color: #091fae;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p {
+            color: #333;
+            font-size: 16px;
+        }
+
+        .sub-hero2 .container p  :nth-child(1) {
+            color: rgb(71, 186, 239);
+            font-size: 16px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 400px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card h3 {
+            color: #0d1440;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 0;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #666;
+
+            padding: 0 15px 20px;
+        }
+
+        .card:hover {
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            background-color: #f8f9fa;
+            transform: scale(1.05);
+        }
+
+        .blue-text {
+            color: #0d1440;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+   <!-- Top Header Section -->
+   <header>
+    <nav>
+        <div class="left">
+            <ul>
+                <li><span>Anha&Mukta's Airlines</span></li>
+            </ul>
+
+        </div>
+        <div class="logo">
+            <img src="Airplane logo.jpg" alt="Airplane">
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href="index.html"><span>Home</a></span>
+                </li>
+
+
+
+                <ul class="navbar">
+                    <li class="dropdown" onclick="toggleDropdown()">
+                        <span>About Us</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <div class="dropdown-content">
+                            <a href="aboutus.html">About AMA</a>
+                            <a href="terminal.html">Terminals</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <script>
+                    function toggleDropdown() {
+                        document.querySelector('.dropdown').classList.toggle('active');
+                    }
+                </script>
+               <li><a href="flightinfo1.html"><span>Flight Info</a></span></li>
+                <ul class="navbar">
+                    <li class="dropdown1" onclick="toggleDropdown1()">
+                        <span>Airport Guide</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <div class="dropdown1-content">
+                            <a href="guide.html">At the airport</a>
+                            <a href="terminal.html">Terminal Guide</a>
+                            <a href="airport.html">To/from the airport</a>
+                            <a href="facility.html">Facilities & Services</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <script>
+                    function toggleDropdown1() {
+                        document.querySelector('.dropdown1').classList.toggle('active');
+                    }
+                </script>
+                <ul class="navbar">
+                    <li class="dropdownA" onclick="toggleDropdownA()">
+                        <span>Experiences</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <div class="dropdownA-content">
+                            <a href="shop.html">Shop</a>
+                            <a href="Dine.html">Dine</a>
+                            <a href="Relax.html">Relax</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <script>
+                    function toggleDropdownA() {
+                        document.querySelector('.dropdownA').classList.toggle('active');
+                    }
+                </script>
+                <li><a href="Contact.html"><span>Contact Us</a></span>
+                </li>
+                <li class="nav-item">
+                    <a class="login-btn" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+    <section class="content">
+        <h1>Facilities & Services</h1><br>
+        <p>Whether you're transferring,arriving or departing from Anha & Mukta Airport,our passenger terminal is
+         designed around your comfort and convenience.To learn more please see below</p>
+    </section>
+
+    <!-- Facility Options 1 -->
+    <section class="transport-options">
+        <div class="option">
+            <img src="lost-property.jpg" alt="Lost Property">
+            <h2>Lost Property</h2><br>
+            <p>To enquire about your misplaced belongings</p>
+        </div>
+        <div class="option">
+            <img src="prayer-rooms.jpg" alt="Prayer Rooms">
+            <h2>Prayer Rooms</h2><br>
+            <p>Peaceful,welcoming and conveniently located</p>
+        </div>
+        <div class="option">
+            <img src="oryx-airport.jpg" alt="Oryx Airport Hotel">
+            <h2>Oryx Airport Hotel</h2><br>
+            <p>Oryx Airport Hotel</p>
+        </div>
+    </section>
+
+    <!-- Faci;ity Options 2 -->
+    <section class="transport-options">
+        <div class="option">
+            <img src="connect.jpg" alt="Connectivity">
+            <h2>Connectivity</h2><br>
+            <p>Easily stay in touch with the rest of your world</p>
+        </div>
+        <div class="option">
+            <img src="child.jpg" alt="Children & Infants">
+            <h2>Children & Infants</h2><br>
+            <p></p>
+        </div>
+        <div class="option">
+            <img src="medical.jpg" alt="Medical & Emergencies">
+            <h2>Medical & Emergencies</h2><br>
+            <p>Expert medical assistance in case of an emergency</p>
+        </div>
+    </section>
+
+    <!-- Facility Options 3 -->
+    <section class="transport-options">
+        <div class="option">
+            <img src="greet.jpg" alt="Meet & Greet Services">
+            <h2>Meet & Greet Services</h2><br>
+            <p>Enhance your travel experience with bespoke hospitality</p>
+        </div>
+        <div class="option">
+            <img src="facilities.jpg" alt="Facilities">
+            <h2>Facilities</h2><br>
+            <p>The little things that make your journey more relaxing</p>
+        </div>
+        
+    </section>
+
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Talk to us from wherever you are</p>
+                <p>📍 P.O Box 24659</p>
+                <p>📌 Doha, Qatar</p>
+                <p>📞 (+974) 4010 6666</p>
+                <p>📧 contact-us@hamadairport.com.qa</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>More Info</h3>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="Privacy_notice.html">Privacy Notice</a></li>
+                    <li><a href="Contact.html">Contacts</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Connect with Us</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com">📘 Facebook</a></li>
+                    <li><a href="https://www.linkedin.com/">🔗 LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/">📸 Instagram</a></li>
+                    <li><a href="https://x.com/?lang=en&mx=2">✖ Twitter</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>@A&M Tweets</h3>
+                <p>Tweets by @A&M</p>
+                <p>&copy; Copyright 2023 by Anha & Mukta Airlines.com</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
